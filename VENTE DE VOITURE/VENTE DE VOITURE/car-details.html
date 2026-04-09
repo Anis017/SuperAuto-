@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details - Anis Supercars</title>
+    <link rel="stylesheet" href="css/style.css">
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-car-side"></i>
+                <span>Anis Supercars</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="cars.html" class="nav-link">Collection</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="admin.html" class="nav-link">Admin</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Car Details -->
+    <section class="car-details" id="carDetails">
+        <div class="container">
+            <div class="back-button">
+                <a href="cars.html" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Collection
+                </a>
+            </div>
+
+            <div class="car-detail-content">
+                <!-- Car images -->
+                <div class="car-gallery">
+                    <div class="main-image">
+                        <img id="mainCarImage" src="" alt="Car Image">
+                        <div class="image-nav">
+                            <button class="image-nav-btn prev" id="prevImage">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button class="image-nav-btn next" id="nextImage">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="thumbnail-gallery" id="thumbnailGallery">
+                        <!-- Thumbnails will be loaded dynamically -->
+                    </div>
+                </div>
+
+                <!-- Car information -->
+                <div class="car-info">
+                    <div class="car-header">
+                        <h1 class="car-title" id="carTitle">Loading...</h1>
+                        <div class="car-price" id="carPrice">$0</div>
+                    </div>
+
+                    <div class="car-description" id="carDescription">
+                        Loading car details...
+                    </div>
+
+                    <div class="car-specs">
+                        <h3>Specifications</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <i class="fas fa-calendar"></i>
+                                <span class="spec-label">Year</span>
+                                <span class="spec-value" id="carYear">-</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-gas-pump"></i>
+                                <span class="spec-label">Fuel Type</span>
+                                <span class="spec-value" id="carFuelType">-</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span class="spec-label">Mileage</span>
+                                <span class="spec-value" id="carMileage">-</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-bolt"></i>
+                                <span class="spec-label">Horsepower</span>
+                                <span class="spec-value" id="carHorsepower">-</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-speedometer"></i>
+                                <span class="spec-label">Top Speed</span>
+                                <span class="spec-value" id="carTopSpeed">-</span>
+                            </div>
+                            <div class="spec-item">
+                                <i class="fas fa-rocket"></i>
+                                <span class="spec-label">0-60 mph</span>
+                                <span class="spec-value" id="carAcceleration">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-actions">
+                        <button class="btn btn-primary" id="bookTestDriveBtn">
+                            <i class="fas fa-calendar-check"></i>
+                            Book Test Drive
+                        </button>
+                        <button class="btn btn-secondary" id="contactBtn">
+                            <i class="fas fa-phone"></i>
+                            Contact Us
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Test Drive Modal -->
+    <div class="modal" id="testDriveModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Book Test Drive</h2>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <form class="test-drive-form" id="testDriveForm">
+                <div class="form-group">
+                    <label for="testDriveName">Full Name *</label>
+                    <input type="text" id="testDriveName" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="testDriveEmail">Email *</label>
+                    <input type="email" id="testDriveEmail" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="testDrivePhone">Phone Number *</label>
+                    <input type="tel" id="testDrivePhone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="testDriveDate">Preferred Date *</label>
+                    <input type="date" id="testDriveDate" name="preferred_date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="testDriveMessage">Message (Optional)</label>
+                    <textarea id="testDriveMessage" name="message" rows="4" placeholder="Any specific requirements or questions..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i>
+                    Submit Request
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-car-side"></i>
+                    <span>Anis Supercars</span>
+                </div>
+                <p class="footer-text">© 2024 Anis Supercars. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/car-details.js"></script>
+</body>
+</html>

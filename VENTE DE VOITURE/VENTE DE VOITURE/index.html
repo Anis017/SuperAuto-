@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anis Supercars - Premium Collection</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-car-side"></i>
+                <span>Anis Supercars</span>
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="cars.html" class="nav-link">Collection</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="admin.html" class="nav-link">Admin</a></li>
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-slider">
+            <!-- Slide 1 -->
+            <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1632154939368-1a92207d8af3?fm=jpg&q=80&w=1920&auto=format&fit=crop');">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h1 class="slide-title">Porsche 911 Turbo S</h1>
+                    <p class="slide-description">The pinnacle of engineering</p>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide" style="background-image: url('https://images.pexels.com/photos/2127733/pexels-photo-2127733.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2');">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h1 class="slide-title">Lamborghini Revuelto</h1>
+                    <p class="slide-description">The future of V12 hybrid technology</p>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide" style="background-image: url('https://images.pexels.com/photos/544542/pexels-photo-544542.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2');">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h1 class="slide-title">Bugatti Chiron</h1>
+                    <p class="slide-description">Ultimate expression of automotive luxury</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="luxury-text">Anis</span> Supercars
+            </h1>
+            <p class="hero-subtitle">Experience the pinnacle of automotive excellence</p>
+            <div class="hero-buttons">
+                <a href="cars.html" class="btn btn-primary">Explore Collection</a>
+                <a href="#video" class="btn btn-secondary">
+                    <i class="fas fa-play"></i>
+                    Watch Video
+                </a>
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+            <button class="slider-btn prev" id="prevSlide" type="button" aria-label="Previous slide">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn next" id="nextSlide" type="button" aria-label="Next slide">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Slider Indicators -->
+        <div class="slider-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up">
+                    <i class="fas fa-shield-alt"></i>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Verified Authentic</div>
+                </div>
+
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-award"></i>
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Premium Cars</div>
+                </div>
+
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-clock"></i>
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Expert Support</div>
+                </div>
+
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-number">10K+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Cars Section -->
+    <section class="featured-cars">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Featured <span class="luxury-text">Collection</span></h2>
+                <p class="section-subtitle">
+                    Discover our handpicked selection of the world's most prestigious supercars
+                </p>
+            </div>
+
+            <div class="cars-grid" id="featuredCars">
+                <!-- Cars will be loaded dynamically -->
+            </div>
+
+            <div class="section-cta" data-aos="fade-up">
+                <a href="cars.html" class="btn btn-primary">View All Cars</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Experience Section -->
+    <section class="premium-experience">
+        <div class="container">
+            <div class="experience-content">
+                <div class="experience-text" data-aos="fade-right">
+                    <h2 class="section-title">The Ultimate <span class="luxury-text">Speedy Experience</span></h2>
+                    <p class="section-description">
+                        From the moment you step into our showroom to the delivery of your dream car,
+                        we ensure every detail meets the highest standards of luxury and excellence.
+                    </p>
+                    <ul class="experience-features">
+                        <li><i class="fas fa-check"></i> Personalized consultation with luxury car experts</li>
+                        <li><i class="fas fa-check"></i> Exclusive test drive experiences</li>
+                        <li><i class="fas fa-check"></i> Comprehensive vehicle history and certification</li>
+                    </ul>
+                </div>
+
+                <div class="experience-image" data-aos="fade-left">
+                    <img src="https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=2" alt="Luxury Experience">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-car-side"></i>
+                    <span>Anis Supercars</span>
+                </div>
+                <p class="footer-text">© 2024 Anis Supercars. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

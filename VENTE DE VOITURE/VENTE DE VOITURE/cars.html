@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Collection - Anis Supercars</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-car-side"></i>
+                <span>Anis Supercars</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="cars.html" class="nav-link active">Collection</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="admin.html" class="nav-link">Admin</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cars Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Our <span class="luxury-text">Collection</span></h1>
+            <p class="page-subtitle">Explore our premium supercars</p>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-container">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search cars...">
+                </div>
+                
+                <div class="filter-controls">
+                    <select id="brandFilter" class="filter-select">
+                        <option value="">All Brands</option>
+                    </select>
+                    
+                    <select id="priceFilter" class="filter-select">
+                        <option value="">All Prices</option>
+                        <option value="0-300000">Under $300K</option>
+                        <option value="300000-600000">$300K - $600K</option>
+                        <option value="600000-1000000">$600K - $1M</option>
+                        <option value="1000000-99999999">Over $1M</option>
+                    </select>
+                    
+                    <button class="filter-toggle" id="filterToggle">
+                        <i class="fas fa-sliders-h"></i>
+                        Filters
+                    </button>
+                </div>
+            </div>
+
+            <div class="advanced-filters" id="advancedFilters">
+                <div class="filter-group">
+                    <label>Year Range</label>
+                    <select id="yearFilter">
+                        <option value="">All Years</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label>Fuel Type</label>
+                    <select id="fuelFilter">
+                        <option value="">All Types</option>
+                        <option value="Petrol">Petrol</option>
+                        <option value="Hybrid">Hybrid</option>
+                        <option value="Electric">Electric</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="results-info">
+                <span id="resultsCount">Loading cars...</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cars Grid -->
+    <section class="cars-listing">
+        <div class="container">
+            <div class="cars-grid" id="carsGrid">
+                <!-- Cars will be loaded dynamically -->
+            </div>
+            
+            <div class="loading-spinner" id="loadingSpinner">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Loading cars...</p>
+            </div>
+            
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>No cars found</h3>
+                <p>Try adjusting your search criteria</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-car-side"></i>
+                    <span>Anis Supercars</span>
+                </div>
+                <p class="footer-text">© 2024 Anis Supercars. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/cars.js"></script>
+</body>
+</html>
